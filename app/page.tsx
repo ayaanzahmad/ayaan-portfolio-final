@@ -129,12 +129,13 @@ export default function PortfolioPage() {
               <div>
                 <h3 className="text-2xl font-medium text-[#EAEAEA]">About</h3>
                 <p className="mt-4 max-w-xl text-[#A0A0A0] leading-relaxed">
-                  Systems engineer with focus on production infrastructure and commercial software development.
-                  Core expertise in distributed systems, enterprise virtualization (VMware ESXi), and full-stack SaaS architecture.
-                  Currently operating a 48-core Cisco UCS production environment for development and testing, while building
-                  multi-platform social media automation SaaS serving commercial clients. Pursuing advanced education in
-                  Electrical and Computer Engineering to formalize expertise in computer architecture and embedded systems. Co-founded
-                  Rooh Review, an education platform, and mentor high school students in computer science fundamentals.
+                  Results-driven Systems Engineer with a proven track record of shipping revenue-critical infrastructure.
+                  Architected the **Cenvi** event platform, processing over $20,000 in high-concurrency transactions with 99.9% uptime.
+                  Engineered the **Tech Liquidators** intelligence engine, reducing capital allocation risk by 40% through predictive analytics,
+                  and developed an **Omni-Channel** SaaS that cut manual marketing operations by 90%.
+                  I combine deep expertise in enterprise virtualization (managing a 48-core self-hosted Cisco UCS cluster) with
+                  modern full-stack engineering to build scalable, production-grade solutions. Currently pursuing Electrical & Computer Engineering
+                  to further specialize in high-performance distributed systems.
                 </p>
               </div>
               <div>
