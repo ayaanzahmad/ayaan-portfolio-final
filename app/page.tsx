@@ -142,18 +142,18 @@ export default function PortfolioPage() {
                 <ul className="mt-6 space-y-6">
                   <li className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline border-b border-[#262626] pb-6">
                     <span className="font-medium text-[#EAEAEA]">
-                      Opakwin · Intern
+                      Oakwin · Full Stack Engineer
                     </span>
                     <span className="text-sm text-[#A0A0A0] mt-1 sm:mt-0">
-                      2024
+                      September 2025 — Present
                     </span>
                   </li>
                   <li className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline border-b border-[#262626] pb-6">
                     <span className="font-medium text-[#EAEAEA]">
-                      Cenve · Intern
+                      Cenvi · Full Stack Developer
                     </span>
                     <span className="text-sm text-[#A0A0A0] mt-1 sm:mt-0">
-                      2024
+                      May 2025 — Present
                     </span>
                   </li>
                   <li className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline border-b border-[#262626] pb-6">
