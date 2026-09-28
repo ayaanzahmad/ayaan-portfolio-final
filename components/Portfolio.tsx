@@ -2,7 +2,6 @@
 import { useState, useEffect, useRef } from "react";
 import RegalHero from "./RegalHero";
 import Crest from "./Crest";
-import ProjectShowcase from "./ProjectShowcase";
 import Link from "next/link";
 import {
   ArrowUpRight,
@@ -72,7 +71,87 @@ export function Footer() {
   );
 }
 export function ProjectGrid() {
-  return <ProjectShowcase />;
+  const [filter, setFilter] = useState("All work");
+  return (
+    <>
+      <div className="filters" aria-label="Filter projects">
+        {["All work", "Software", "Systems", "Operations"].map((x) => (
+          <button
+            key={x}
+            aria-pressed={filter === x}
+            className={filter === x ? "active" : ""}
+            onClick={() => setFilter(x)}
+          >
+            {x}
+            {x === "All work" && <span>06</span>}
+          </button>
+        ))}
+      </div>
+      <div className="project-grid">
+        {projects
+          .filter((p) => filter === "All work" || p.category === filter)
+          .map((p) => (
+            <Link
+              className={`project-card project-${p.id}`}
+              key={p.id}
+              href={`/projects/${p.id}`}
+            >
+              <div className="project-art" aria-hidden="true">
+                <span className="art-index">PROJECT / {p.number}</span>
+                {p.id === "00" ? (
+                  <img
+                    className="brand-logo cenvi-brand"
+                    src="/brands/cenvi.png"
+                    alt=""
+                  />
+                ) : p.id === "04" ? (
+                  <div className="server-art">
+                    {[1, 2, 3].map((n) => (
+                      <div key={n}>
+                        <i />
+                        <i />
+                        <span />
+                        <b />
+                      </div>
+                    ))}
+                  </div>
+                ) : p.id === "dynamo" ? (
+                  <span className="brand-logo brand-mask handshake-brand" />
+                ) : p.id === "meticulous" ? (
+                  <span className="brand-logo brand-mask meticulous-brand" />
+                ) : p.id === "03" ? (
+                  <div className="voice-art">
+                    {[22, 45, 70, 40, 92, 60, 34, 78, 48, 24, 52].map(
+                      (h, i) => (
+                        <i key={i} style={{ height: h }} />
+                      ),
+                    )}
+                  </div>
+                ) : (
+                  <div className="monogram-art">
+                    Aa<span>Design meets purpose.</span>
+                  </div>
+                )}
+                <span className="art-category">{p.category}</span>
+                <span className="project-arrow">
+                  <ArrowUpRight size={22} />
+                </span>
+              </div>
+              <div className="project-copy">
+                <span className="eyebrow">{p.subtitle}</span>
+                <h3>{p.title}</h3>
+                <p>{p.description}</p>
+                <div className="tags">
+                  {p.tech.slice(0, 3).map((t) => (
+                    <span key={t}>{t}</span>
+                  ))}
+                </div>
+              </div>
+            </Link>
+          ))}
+      </div>
+    </>
+  );
 }
 export default function Portfolio() {
   const [expanded, setExpanded] = useState<number | null>(0);
