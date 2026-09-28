@@ -1,41 +1,27 @@
 import type { Metadata } from "next";
-import { Cinzel, Inter } from "next/font/google";
+import { Cormorant_Garamond, Manrope } from "next/font/google";
 import "./globals.css";
-import { SpotlightProvider } from "@/contexts/SpotlightContext";
-import SmoothScroll from "@/components/SmoothScroll";
-import CustomCursor from "@/components/CustomCursor";
-
-const cinzel = Cinzel({
-  variable: "--font-cinzel",
+const serif = Cormorant_Garamond({
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-serif",
 });
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
-
+const sans = Manrope({ subsets: ["latin"], variable: "--font-sans" });
 export const metadata: Metadata = {
-  title: "Ayaan Ahmad | Systems Engineer & Full-Stack Developer",
-  description: "Systems engineer specializing in distributed infrastructure, enterprise virtualization, and production SaaS development. Building scalable solutions across the full stack—from bare metal servers to cloud applications.",
+  title: "Ayaan Ahmad — Software, Systems & Operations",
+  description:
+    "Computer science student at Georgia State building software, administering systems, and connecting technology with operations. Interested in technology and IP law.",
 };
-
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body
-        className={`${cinzel.variable} ${inter.variable} antialiased`}
-      >
-        <SmoothScroll>
-          <SpotlightProvider>
-            <CustomCursor />
-            {children}
-          </SpotlightProvider>
-        </SmoothScroll>
+      <body className={`${serif.variable} ${sans.variable}`}>
+        <a className="skip-link" href="#main">
+          Skip to content
+        </a>
+        {children}
       </body>
     </html>
   );
