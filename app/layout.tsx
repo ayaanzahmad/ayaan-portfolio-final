@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import RouteScrollReset from "@/components/RouteScrollReset";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
 import "./globals.css";
 import "./editorial.css";
@@ -19,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${serif.variable} ${sans.variable}`}>
+        <RouteScrollReset />
         <a className="skip-link" href="#main">
           Skip to content
         </a>

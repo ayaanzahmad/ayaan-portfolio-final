@@ -155,7 +155,7 @@ export const caseStudies: Record<string, CaseStudy> = {
       },
       {
         title: "Movement with a purpose",
-        body: "A staged opening, scroll reveals, and an interactive project collection guide attention through the page. The carousel supports keyboard navigation and direct slide selection; reduced-motion preferences simplify animation.",
+        body: "A staged opening, scroll reveals, and an interactive project collection guide attention through the page. The project library offers category filters and direct access to each case study; reduced-motion preferences simplify animation.",
       },
       {
         title: "Built to be explored",
