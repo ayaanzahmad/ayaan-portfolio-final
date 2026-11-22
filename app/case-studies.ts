@@ -115,7 +115,7 @@ export const caseStudies: Record<string, CaseStudy> = {
       { value: "14 days", label: "Onboarding & documentation" },
       { value: "4", label: "Georgia counties" },
     ],
-    link: "https://meticuloushs.com",
+    link: "https://meticuloushs.org",
     linkLabel: "Visit Meticulous",
   },
   "03": {
